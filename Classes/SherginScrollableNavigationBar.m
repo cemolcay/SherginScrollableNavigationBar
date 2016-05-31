@@ -258,17 +258,18 @@ NSString* NavigationBarAnimationName = @"SherginScrollableNavigationBar";
 
 - (CGFloat)statusBarHeight
 {
-    switch ([UIApplication sharedApplication].statusBarOrientation) {
-        case UIInterfaceOrientationPortrait:
-        case UIInterfaceOrientationPortraitUpsideDown:
-            return CGRectGetHeight([UIApplication sharedApplication].statusBarFrame);
-            break;
-        case UIInterfaceOrientationLandscapeLeft:
-        case UIInterfaceOrientationLandscapeRight:
-            return CGRectGetWidth([UIApplication sharedApplication].statusBarFrame);
-        default:
-            break;
-    };
+//    Disable this block for keyboard app extension target.
+//    switch ([UIApplication sharedApplication].statusBarOrientation) {
+//        case UIInterfaceOrientationPortrait:
+//        case UIInterfaceOrientationPortraitUpsideDown:
+//            return CGRectGetHeight([UIApplication sharedApplication].statusBarFrame);
+//            break;
+//        case UIInterfaceOrientationLandscapeLeft:
+//        case UIInterfaceOrientationLandscapeRight:
+//            return CGRectGetWidth([UIApplication sharedApplication].statusBarFrame);
+//        default:
+//            break;
+//    };
     return 0.0f;
 }
 
